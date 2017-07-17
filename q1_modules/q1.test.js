@@ -8,6 +8,6 @@ const result = /* 여기에서 위의 임포트한 문자열을 모두 합치세
 const expectedResult = 'FOOBARBAZ';
 
 // 아래의 함수가 위의 값이 서로 같은지를 비교하고 다르다면 테스트를 실패시킵니다.
-describe('Q1_Modules', test('Answer', () => {
+describe('Q1_Modules', () => test('Answer', () => {
   expect(result).toBe(expectedResult);
 }));
