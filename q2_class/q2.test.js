@@ -9,7 +9,7 @@ class Double {
 const doubleOfTwo = new Double(2);
 const doubleOfThree = new Double(3);
 
-describe('Q2_Double', () => {
+describe('Q2_Double', () => test('Answer', () => {
   expect(doubleOfTwo.getValue()).toBe(4);
   expect(doubleOfThree.getValue()).toBe(6);
-})
+}))
