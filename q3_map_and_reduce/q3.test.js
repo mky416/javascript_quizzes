@@ -20,6 +20,7 @@ describe('Q4_map_and_reduce', () => test('Answer', () => {
   // 참고: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
   const playerNames = players.map(player => {
     /* 여기에 map 에 전달되는 함수를 구현하세요. */
+    return player.name
   });
   expect(playerNames).toEqual( // 실행한 결과가 아래와 같은지 비교합니다.
     ['민수도적', '해운대전사', '강아지와나', '자연의힘내게로', '해운대힐러']
@@ -30,6 +31,8 @@ describe('Q4_map_and_reduce', () => test('Answer', () => {
   // 참고: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
   const usersPerType = players.reduce((result, player) => {
     /* 여기에 reduce 에 전달되는 함수를 구현하세요 */
+    result[player.type] = result[player.type]?result[player.type]+1:1;
+    return result;
   }, {});
   expect(usersPerType).toEqual(
     {
