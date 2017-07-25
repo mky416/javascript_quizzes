@@ -11,6 +11,9 @@
  */
 const times = (num, action) => {
   // 여기에 구현해 보세요
+  for(let i=0; i<num; i++){
+    action(i);
+  }
   return;
 };
 
